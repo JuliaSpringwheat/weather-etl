@@ -1,23 +1,23 @@
 name: Weather ETL
 
 on:
-   workflow_dispatch:
+  workflow_dispatch:
 
 jobs:
   etl:
     runs-on: ubuntu-latest
-	
+
     steps:
-     - name: Set up Python
-       uses: actions/setup-python@v5
-       with:
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
           python-version: "3.11"
 
-     - name: Checkout repository
-       uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-     - name: Install dependencies
-       run: pip install requests
+      - name: Install dependencies
+        run: pip install requests
 
-     - name: Run ETL
-       run: python etl.py	
+      - name: Run ETL
+        run: python etl.py
