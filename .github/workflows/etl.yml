@@ -6,7 +6,6 @@ on:
 jobs:
   etl:
     runs-on: ubuntu-latest
-
     steps:
       - name: Set up Python
         uses: actions/setup-python@v5
