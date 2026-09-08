@@ -23,3 +23,9 @@ jobs:
 
       - name: Run ETL
         run: python etl.py
+
+      - name: Upload weather for
+        uses: action/upload-artifact@v4
+        with:
+          name: weather-forecast
+          path: weather-forecast.csv        
